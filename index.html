@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/fevicon.svg" type="image/icon">
+    <script src="https://kit.fontawesome.com/9e6c8f61cb.js" crossorigin="anonymous"></script>
+    <title>Light On & Off</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500&display=swap');
+        body {
+            background-color: #572315;
+        }
+
+        .main-div {
+            width: 70%;
+            height: auto;
+            margin: 10rem;
+            margin-left: 15rem;
+        }
+
+        h1 {
+            color: white;
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 40px;
+            text-align: center;
+        }
+
+        #lightOn{
+            background: #728C00;
+            width: 9rem;
+            height: 3rem;
+            border-block: 3px solid black;
+            border-radius: 8%;
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 20px;
+            text-align: center;       
+            color: white; 
+            margin-left: 15rem;
+        }
+
+        #lightOff{
+            background: #bb0d0d;
+            width: 9rem;
+            height: 3rem;
+            border-block: 3px solid black;
+            border-radius: 8%;
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 20px;
+            text-align: center;       
+            color: white; 
+        }
+
+        button:hover {
+            cursor: pointer;
+            transform: scale(1.1);
+        }
+
+        img {
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-div">
+        <h1>Light On/Off Switches <i class="fa-solid fa-toggle-off"></i></h1>
+        <button id="lightOn" onclick="lightOn()">Turn On  <i class="fa-solid fa-toggle-on"></i></button>
+        <img src="images/lightOff.png" alt="Light Off" id="image">
+        <button id="lightOff" onclick="lightOff()">Turn Off  <i class="fa-solid fa-toggle-off"></i></button>
+    </div>
+    
+    <script>
+        const lightOn =()=>document.getElementById('image').src = "images/lightOn.png";
+        const lightOff =()=>document.getElementById('image').src = "images/lightOff.png";
+    </script>
+
+</body>
+</html>
